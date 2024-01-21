@@ -1,0 +1,688 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9d6f21f37d7854fbbc0b2d33ca86f6, type: 3}
+  m_Name: 1 - Stranger Danger
+  m_EditorClassIdentifier: 
+  questTitle: Stranger Danger
+  questDescription: 'Jonas, the colony taskmaster, has asked you to go search for
+    a missing scout. '
+  ItemStateDescription:
+  - itemState: 2
+    line: Go look for the missing scout
+  - itemState: 1
+    line: Tell Jonas about the scout's fate
+  - itemState: 3
+    line: Quest completed
+  questRewards:
+  - affilationRequired: 0
+    rewards:
+    - consumableType: 0
+      amount: 2
+    - consumableType: 1
+      amount: 2
+    - consumableType: 2
+      amount: 2
+  - affilationRequired: 10
+    rewards:
+    - consumableType: 0
+      amount: 3
+    - consumableType: 1
+      amount: 5
+  - affilationRequired: -10
+    rewards:
+    - consumableType: 1
+      amount: 5
+    - consumableType: 2
+      amount: 3
+  stateLines:
+  - state: 0
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Oh, Kowalski, you're finally awake. The crash had knocked you out cold.  How
+          do you feel?
+        answers:
+        - text: 'I''m still quite dizzy... is everyone ok? '
+          lineIndex: 1
+          affiliationValue: -5
+        - text: I'm all good. What's the situation?
+          lineIndex: 1
+          affiliationValue: 5
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Despite the odds, everybody survived the crash. Just as we suspected,
+          this planet fits all the criteria to be habitable to a human. As you can
+          see, we've already established camp.
+        answers:
+        - text: That's a relief! Glad to know everyone is well.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: How can we know if it's safe? A planet with these conditions can have
+            all sorts of different creatures roaming about.
+          lineIndex: 2
+          affiliationValue: 10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Hmm, you make an excellent point... I'll talk to the builders and have
+          them set up a defensive perimeter.
+        answers:
+        - text: Good. Well, I'm off to take a nap, see you later.
+          lineIndex: 3
+          affiliationValue: -15
+        - text: Those guys are working themselves down to the bone. I'll go help them
+            out.
+          lineIndex: 3
+          affiliationValue: 10
+        - text: Great! Is there anything else you wanted to talk about?
+          lineIndex: 3
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: You're absolutely right! I thought the same thing. I'll talk to the
+          builders and have them set up a defensive perimeter.
+        answers:
+        - text: Good. Well, I'm off to take a nap, see you later.
+          lineIndex: 3
+          affiliationValue: -15
+        - text: Those guys are working themselves down to the bone. I'll go help them
+            out.
+          lineIndex: 3
+          affiliationValue: 10
+        - text: Great! Is there anything else you wanted to talk about?
+          lineIndex: 3
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: I hate to admit, but you're right... I'll talk to the builders and have
+          them set up a defensive perimeter.
+        answers:
+        - text: Good. Well, I'm off to take a nap, see you later.
+          lineIndex: 3
+          affiliationValue: -15
+        - text: Those guys are working themselves down to the bone. I'll go help them
+            out.
+          lineIndex: 3
+          affiliationValue: 10
+        - text: Great! Is there anything else you wanted to talk about?
+          lineIndex: 3
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Actually, I have an important task for you.
+        answers:
+        - text: What is it?
+          lineIndex: 5
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: I like your enthusiasm! Actually, I have an important task for you.
+        answers:
+        - text: What is it?
+          lineIndex: 5
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Ugh, can you just let me finish? I have an important task for you...
+        answers:
+        - text: Oh sorry... What is it?
+          lineIndex: 5
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Yeah... about that...
+        answers:
+        - text: What happened?
+          lineIndex: 5
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Yeah... about that...
+        answers:
+        - text: What happened?
+          lineIndex: 5
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Yeah... about that...
+        answers:
+        - text: What happened?
+          lineIndex: 5
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Our scout went exploring west a few hours ago, but he hasn't returned
+          yet. We're worried that something might have happened to him. Do you think
+          you can go check what's going on?
+        answers:
+        - text: Hell no, so I can disappear too?? Send someone else!
+          lineIndex: 6
+          affiliationValue: -10
+        - text: Yes, I shall depart at once. Let's hope he's safe and sound!
+          lineIndex: -1
+          affiliationValue: 0
+        - text: You mean Benny? Oh dear, I hope he's ok... I'll go look for him immediately!
+          lineIndex: -1
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: 10
+        text: Our scout went exploring west a few hours ago, but he hasn't returned
+          yet. We're worried that something might have happened to him. Do you think
+          you can go check what's going on?
+        answers:
+        - text: Hell no, so I can disappear too?? Send someone else!
+          lineIndex: 6
+          affiliationValue: -10
+        - text: Yes, I shall depart at once. Let's hope he's safe and sound!
+          lineIndex: -1
+          affiliationValue: 0
+        - text: You mean Benny? Oh dear, I hope he's ok... I'll go look for him immediately!
+          lineIndex: -1
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: -10
+        text: Our scout went exploring west a few hours ago, but he hasn't returned
+          yet. I want you to go look for him. Think you can handle at least that?
+        answers:
+        - text: Hell no, so I can disappear too?? Send someone else!
+          lineIndex: 6
+          affiliationValue: -10
+        - text: Of course I can! I shall depart at once.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: You mean Benny? Oh dear, I hope he's ok... I'll go look for him immediately!
+          lineIndex: -1
+          affiliationValue: 10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Well, everyone else refused the task while you were unconscious, which
+          means you were the last one to say no, which also means it has to be you
+          anyway. Sorry, those are the laws of democracy.
+        answers:
+        - text: 'That''s not how it works... but whatever, I''ll go... '
+          lineIndex: -1
+          affiliationValue: -5
+        - text: Fair enough... I'll be going then.
+          lineIndex: -1
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: 10
+        text: Kowalski please... I'm pretty sure you're joking anyway, but you really
+          are the most qualified person here for this task. I'm counting on you!
+        answers:
+        - text: Yeah, I was joking. Don't worry, I'll find him.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: You are infuriating... Just go, I don't have time for your childish
+          banter.
+        answers:
+        - text: Fine, I'll see what I can do.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 1
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Kowalski, have you found the scout yet?
+        answers:
+        - text: Not yet...
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Oh hey Kowalski! How is your search going?
+        answers:
+        - text: Haven't found him yet... But I will!
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: What are you still doing here... Have you found the scout yet?
+        answers:
+        - text: Not yet...
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 2
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Kowalski, have you found the scout yet?
+        answers:
+        - text: Yes. He's dead.
+          lineIndex: 1
+          affiliationValue: 0
+        - text: Well, I found his corpse...
+          lineIndex: 1
+          affiliationValue: -5
+        - text: Jonas, I'm sorry... Benny is dead.
+          lineIndex: 1
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: 10
+        text: Oh hey Kowalski! How is your search going?
+        answers:
+        - text: Yes. He's dead.
+          lineIndex: 1
+          affiliationValue: 0
+        - text: Well, I found his corpse...
+          lineIndex: 1
+          affiliationValue: -5
+        - text: Jonas, I'm sorry... Benny is dead.
+          lineIndex: 1
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: -10
+        text: What are you still doing here... Have you found the scout yet?
+        answers:
+        - text: Yes. He's dead.
+          lineIndex: 1
+          affiliationValue: 0
+        - text: Well, I found his corpse...
+          lineIndex: 1
+          affiliationValue: -5
+        - text: Jonas, I'm sorry... Benny is dead.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Oh my, this is terrible news... Do you have any idea how he died?
+        answers:
+        - text: He was ambushed and attacked by a pack of scary looking aliens.
+          lineIndex: 2
+          affiliationValue: 0
+        - text: Some strange one-eyed creatures I saw earlier probably killed him.
+          lineIndex: 2
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Oh my, this is terrible news... Do you have any idea how he died?
+        answers:
+        - text: He was ambushed and attacked by a pack of scary looking aliens.
+          lineIndex: 2
+          affiliationValue: 0
+        - text: Some strange one-eyed creatures I saw earlier probably killed him.
+          lineIndex: 2
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Oh my, this is terrible news... Do you have any idea how he died?
+        answers:
+        - text: He was ambushed and attacked by a pack of scary looking aliens.
+          lineIndex: 2
+          affiliationValue: 0
+        - text: Some strange one-eyed creatures I saw earlier probably killed him.
+          lineIndex: 2
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: What? You mean those cute little yellow things over there?
+        answers:
+        - text: No, not like them. The ones I saw were very hostile, and seem to be
+            an entirely different species.
+          lineIndex: 3
+          affiliationValue: 5
+        - text: Yes. They cuddled him to death.
+          lineIndex: 4
+          affiliationValue: -10
+        - text: Now that you mention it, maybe it was just my imagination...
+          lineIndex: 4
+          affiliationValue: -15
+        answerIndex: 0
+      - affilation: 10
+        text: What? You mean those cute little yellow things over there?
+        answers:
+        - text: No, not like them. The ones I saw were very hostile, and seem to be
+            an entirely different species.
+          lineIndex: 3
+          affiliationValue: 5
+        - text: Yes. They cuddled him to death.
+          lineIndex: 4
+          affiliationValue: -10
+        - text: Now that you mention it, maybe it was just my imagination...
+          lineIndex: 4
+          affiliationValue: -15
+        answerIndex: 0
+      - affilation: -10
+        text: You mean those cute little yellow things? Really... You've been tripping
+          on acid again, haven't you?
+        answers:
+        - text: What? No! The ones I saw were very hostile, and seem to be an entirely
+            different species.
+          lineIndex: 3
+          affiliationValue: 0
+        - text: Now that you mention it, that was probably it...
+          lineIndex: 4
+          affiliationValue: -15
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: I see... Have you suffered any serious injuries?
+        answers:
+        - text: I'm fine. Bastards barely even touched me.
+          lineIndex: 5
+          affiliationValue: 5
+        - text: Yes, Jonas, I'm injured. Those things almost killed me, I'm bleeding
+            out in front of you as we speak.
+          lineIndex: 7
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: 10
+        text: They attacked you too??. Are you injured?
+        answers:
+        - text: I'm fine. Bastards barely even touched me.
+          lineIndex: 5
+          affiliationValue: 5
+        - text: Yes, Jonas, I'm injured. Those things almost killed me, I'm bleeding
+            out in front of you as we speak.
+          lineIndex: 7
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: -10
+        text: They attacked you too... and you survived. They must not be so dangerous
+          after all. Are you injured?
+        answers:
+        - text: I'm fine. Bastards barely even touched me.
+          lineIndex: 5
+          affiliationValue: 5
+        - text: Yes, Jonas, I'm injured. Those things almost killed me, I'm bleeding
+            out in front of you as we speak.
+          lineIndex: 7
+          affiliationValue: -10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Kowalski, now is not the time for jokes, damn it! Benny is dead! Do
+          you know what happened or not?
+        answers:
+        - text: If you ask me stupid questions, I'll give you stupid answers. I wouldn't
+            tell you aliens killed him unless I was sure of it.
+          lineIndex: 6
+          affiliationValue: -10
+        - text: Sorry, I shouldn't have joked about something this serious. But I
+            wasn't joking when I said he was killed by evil aliens.
+          lineIndex: 6
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: 10
+        text: I was just starting to like you... Don't ruin it with those jokes.
+        answers:
+        - text: If you ask me stupid questions, I'll give you stupid answers. I wouldn't
+            tell you aliens killed him unless I was sure of it.
+          lineIndex: 6
+          affiliationValue: -10
+        - text: Sorry, I shouldn't have joked about something this serious. But I
+            wasn't joking when I said he was killed by evil aliens.
+          lineIndex: 6
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: -10
+        text: I cannot stand your stupid jokes. Do you actually know what happened
+          to the scout or are you just here to waste my time?
+        answers:
+        - text: If you ask me stupid questions, I'll give you stupid answers. I wouldn't
+            tell you aliens killed him unless I was sure of it.
+          lineIndex: 6
+          affiliationValue: -10
+        - text: Sorry, I shouldn't have joked about something this serious. But I
+            wasn't joking when I said he was killed by evil aliens.
+          lineIndex: 6
+          affiliationValue: 10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: I see. Still, those creatures you speak of managed to get their hands
+          on Benny... Nevertheless, it's a good think they did not kill you too.
+        answers:
+        - text: Yup.
+          lineIndex: 6
+          affiliationValue: 0
+        - text: Personally I wouldn't have minded it that much, but let's move on.
+          lineIndex: 6
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: 10
+        text: Wow... Still, those creatures you speak of managed to get their hands
+          on Benny... But at least you're here safe and sound! I'm glad they didn't
+          kill you too!
+        answers:
+        - text: Yup!
+          lineIndex: 6
+          affiliationValue: 0
+        - text: Personally I wouldn't have minded it that much, but let's move on.
+          lineIndex: 6
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: -10
+        text: I see. Still, those creatures you speak of managed to get their hands
+          on Benny... Too bad they didn't manage to kill you too.
+        answers:
+        - text: Whoa... I know we're not in the best of terms, but thats a bit harsh...
+          lineIndex: 6
+          affiliationValue: 5
+        - text: I know right... I would have preferred that to having to sit here
+            talking to you.
+          lineIndex: 6
+          affiliationValue: -10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Anyway, I need a more detailed task report, so give me some more information.
+          Anything useful you can tell me about those aliens?
+        answers:
+        - text: 'They appear to have a tribal-like behavior, and don''t seem to be
+            a very advanced civilization. '
+          lineIndex: 8
+          affiliationValue: 10
+        - text: They have some pretty nice unibrows...
+          lineIndex: 9
+          affiliationValue: -10
+        - text: Nope, sorry. See you later!
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Anyway, I need a more detailed task report, so please give me a bit
+          more information. Anything useful you can tell me about those aliens?
+        answers:
+        - text: 'They appear to have a tribal-like behavior, and don''t seem to be
+            a very advanced civilization. '
+          lineIndex: 8
+          affiliationValue: 10
+        - text: They have some pretty nice unibrows...
+          lineIndex: 9
+          affiliationValue: -10
+        - text: Nope, sorry. See you later!
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: '*SIGH*... Anyway, I need a more detailed task report, so give me some
+          more information. Anything useful you can tell me about those aliens?'
+        answers:
+        - text: 'They appear to have a tribal-like behavior, and don''t seem to be
+            a very advanced civilization. '
+          lineIndex: 8
+          affiliationValue: 10
+        - text: They have some pretty nice unibrows...
+          lineIndex: 9
+          affiliationValue: -10
+        - text: Nope, sorry. See you later!
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: You can talk to the medics when we're done with this task report.
+        answers:
+        - text: You're right, I can handle it.
+          lineIndex: 6
+          affiliationValue: 0
+        - text: Fine, let's get this over with. Those medics better not be busy when
+            I get there...
+          lineIndex: 6
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Oh come on, you're a tough guy, you can handle it. You can talk to the
+          medics when we're done with this task report.
+        answers:
+        - text: You're right, I can handle it.
+          lineIndex: 6
+          affiliationValue: 0
+        - text: Fine, let's get this over with. Those medics better not be busy when
+            I get there...
+          lineIndex: 6
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: If you're gonna bleed out, please hurry. Otherwise, we should get back
+          to your task report, hopefully with no more silly interruptions.
+        answers:
+        - text: Believe me, I'm going as fast as I can...
+          lineIndex: 6
+          affiliationValue: -5
+        - text: Fine, let's get this over with.
+          lineIndex: 6
+          affiliationValue: 5
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Interesting... that explains why they haven't attacked the colony...
+          They must be intimidated by all the people walking around and all the structures
+          we've built... But they will still attack people roaming outside in the
+          wilderness.
+        answers:
+        - text: You're probably right. So as long as we stay here in the colony, we
+            have nothing to worry about!
+          lineIndex: 10
+          affiliationValue: 5
+        - text: You're probably right. But some of us will have to leave the colony
+            eventually...
+          lineIndex: 10
+          affiliationValue: 10
+        - text: 'What? Your theories make no sense. '
+          lineIndex: 9
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: 10
+        text: Interesting... that explains why they haven't attacked the colony...
+          They must be intimidated by all the people walking around and all the structures
+          we've built... But they will still attack people roaming outside in the
+          wilderness. Thats good info Kowalski!
+        answers:
+        - text: You're probably right. So as long as we stay here in the colony, we
+            have nothing to worry about!
+          lineIndex: 10
+          affiliationValue: 5
+        - text: You're probably right. But some of us will have to leave the colony
+            eventually...
+          lineIndex: 10
+          affiliationValue: 10
+        - text: 'What? Your theories make no sense. '
+          lineIndex: 9
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: -10
+        text: Interesting... that explains why they haven't attacked the colony...
+          They must be intimidated by all the people walking around and all the structures
+          we've built... But they will still attack people roaming outside in the
+          wilderness. This is surprisingly useful info coming from you...
+        answers:
+        - text: You're probably right. So as long as we stay here in the colony, we
+            have nothing to worry about!
+          lineIndex: 10
+          affiliationValue: 5
+        - text: You're probably right. But some of us will have to leave the colony
+            eventually...
+          lineIndex: 10
+          affiliationValue: 10
+        - text: 'What? Your theories make no sense. '
+          lineIndex: 9
+          affiliationValue: -10
+        answerIndex: 2
+    - affilationLines:
+      - affilation: 0
+        text: I was hoping you'd answer more seriously... I guess I won't be getting
+          anything useful out of you anymore. I think we're done here for now, I will
+          let you know when I have another task for you. Goodbye.
+        answers:
+        - text: Goodbye.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: I was hoping you'd answer more seriously... I know you can be very competent
+          when you want to. But I guess you're getting bored at this point. I think
+          we're done here for now, I will let you know when I have another task for
+          you. Great work Kowalski!
+        answers:
+        - text: Thank you Jonas. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: I knew you'd say something stupid like that... I guess I won't be getting
+          anything useful out of you anytime soon. I think we're done here for now,
+          I will let you know when I have another task for you. And next time, try
+          to take it seriously.
+        answers:
+        - text: Ok, bye...
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Yes, that's correct. Well, I think we're done here. I will let you know
+          when I have another task for you. Goodbye.
+        answers:
+        - text: Goodbye.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Yes, that's correct. Well, I think we're done here. Great work, Kowalski!
+          I will let you know when I have another task for you. See you soon!
+        answers:
+        - text: Thank you Jonas. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Yes, that's correct. You were uncharacteristically useful today. Well,
+          I think we're done here. I will let you know when I have another task for
+          you. I'll be lucky if you manage to be half as effective as you were today.
+        answers:
+        - text: Ok, bye...
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 3
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Neutral PostCompleted
+        answers:
+        - text: neutral
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0

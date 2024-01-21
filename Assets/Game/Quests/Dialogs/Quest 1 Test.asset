@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9d6f21f37d7854fbbc0b2d33ca86f6, type: 3}
+  m_Name: Quest 1 Test
+  m_EditorClassIdentifier: 
+  questTitle: Stranger Danger
+  questDescription: 'Jonas, the colony taskmaster, has asked you to go search for
+    a missing scout. '
+  ItemStateDescription:
+  - itemState: 2
+    line: Go look for the missing scout
+  - itemState: 1
+    line: Tell Jonas about the scout's fate
+  - itemState: 3
+    line: Quest completed
+  questRewards:
+  - affilationRequired: 0
+    rewards:
+    - consumableType: 0
+      amount: 2
+    - consumableType: 1
+      amount: 2
+    - consumableType: 2
+      amount: 2
+  - affilationRequired: 10
+    rewards:
+    - consumableType: 0
+      amount: 5
+    - consumableType: 1
+      amount: 1
+  - affilationRequired: -10
+    rewards:
+    - consumableType: 1
+      amount: 5
+    - consumableType: 2
+      amount: 3
+  stateLines:
+  - state: 0
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Begin neutral
+        answers:
+        - text: neutral 1
+          lineIndex: 1
+          affiliationValue: 0
+        - text: positive 1
+          lineIndex: 1
+          affiliationValue: 10
+        - text: negative 1
+          lineIndex: 1
+          affiliationValue: -10
+        - text: cxcxxxcxcdx c  dcded cydcdoe ibcdwid ixnidbcnid
+          lineIndex: 1
+          affiliationValue: 0
+        - text: nbdbdnoepw+kpdpw codcodmcsp+w mocppos cpscmods
+          lineIndex: 1
+          affiliationValue: 0
+        answerIndex: 1
+    - affilationLines:
+      - affilation: 0
+        text: Neutral dialog 1
+        answers:
+        - text: positive 2
+          lineIndex: 2
+          affiliationValue: 10
+        - text: negative 2
+          lineIndex: 2
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: 10
+        text: Positive dialog 1
+        answers:
+        - text: positive 2
+          lineIndex: 2
+          affiliationValue: 10
+        - text: negative 2
+          lineIndex: 2
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: -10
+        text: Nagative dialog 1
+        answers:
+        - text: positive 2
+          lineIndex: 2
+          affiliationValue: 10
+        - text: negative 2
+          lineIndex: 2
+          affiliationValue: -10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Neutal End
+        answers:
+        - text: Finsh neutral
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Positive End
+        answers:
+        - text: Finsh neutral
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Nagativel End
+        answers:
+        - text: Finsh neutral
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 1
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Waiting Neutral
+        answers:
+        - text: 'neutral '
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 2
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: 'Neutral Compleated '
+        answers:
+        - text: neutral
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 3
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Neutral PostCompleted
+        answers:
+        - text: neutral
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0

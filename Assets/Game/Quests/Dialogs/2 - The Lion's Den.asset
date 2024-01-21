@@ -1,0 +1,700 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9d6f21f37d7854fbbc0b2d33ca86f6, type: 3}
+  m_Name: 2 - The Lion's Den
+  m_EditorClassIdentifier: 
+  questTitle: The Lion's Den
+  questDescription: Paula, the head of the science department, has asked for your
+    help. Her field team managed to locate one of the required lost parts, but it
+    is inside an alien stronghold. The others don't seem inclined to jump head first
+    into the lion's den, which makes it a perfect mission for you.
+  ItemStateDescription:
+  - itemState: 2
+    line: Retrieve the reactor core from the Draks' stronghold
+  - itemState: 1
+    line: Deliver the reactor core to Paula
+  - itemState: 3
+    line: Quest completed
+  questRewards:
+  - affilationRequired: 0
+    rewards:
+    - consumableType: 1
+      amount: 5
+    - consumableType: 2
+      amount: 5
+  - affilationRequired: 10
+    rewards:
+    - consumableType: 1
+      amount: 5
+    - consumableType: 2
+      amount: 5
+  - affilationRequired: 10
+    rewards:
+    - consumableType: 0
+      amount: 2
+    - consumableType: 1
+      amount: 5
+  stateLines:
+  - state: 0
+    lines:
+    - affilationLines:
+      - affilation: 10
+        text: Kowalski, hi! I've been meaning to talk to you. Do you have a moment?
+        answers:
+        - text: Sure, what do you want to talk about?
+          lineIndex: 1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 10
+        text: I've been reading the report Jonas sent me about your first assignment...
+          It's a shame that Benny didn't make it... That being said, casualties are
+          to be expected in the scenario we're in at the moment, and although I was
+          sad for Benny, I was quite pleased when I saw that my suspicions were right...
+          This planet is already inhabitted by an inteligent species.
+        answers:
+        - text: That's a little insensitive from you...
+          lineIndex: 2
+          affiliationValue: -10
+        - text: Yes... I also had a feeling we wouldn't be alone here.
+          lineIndex: 3
+          affiliationValue: 10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Oh, I'm sorry if I come across as heartless or something... It's just
+          my way of coping with things, I tend to look at everything through a more
+          logical and scientific lense. Please forgive me...
+        answers:
+        - text: It's fine Paula, I understand. Go on.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: Whatever, I don't care... Go on.
+          lineIndex: 4
+          affiliationValue: -10
+        - text: I will NEVER forgive you!
+          lineIndex: 5
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: 10
+        text: Oh, I'm sorry if I come across as heartless or something... It's just
+          my way of coping with things, I tend to look at everything through a more
+          logical and scientific lense. Please forgive me...
+        answers:
+        - text: It's fine Paula, I understand. Go on.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: Whatever, I don't care... Go on.
+          lineIndex: 4
+          affiliationValue: -10
+        - text: I will NEVER forgive you!
+          lineIndex: 5
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: -10
+        text: Oh, I'm sorry if I come across as heartless or something... It's just
+          my way of coping with things, I tend to look at everything through a more
+          logical and scientific lense. Please forgive me...
+        answers:
+        - text: It's fine Paula, I understand. Go on.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: Whatever, I don't care... Go on.
+          lineIndex: 4
+          affiliationValue: -10
+        - text: I will NEVER forgive you!
+          lineIndex: 5
+          affiliationValue: 10
+        answerIndex: 1
+    - affilationLines:
+      - affilation: 10
+        text: I know right?! Well anyway, my field research team has been observing
+          them, and as you yourself pointed out, these creatures seem to adopt a tribal-like
+          behavior. They're also very aggressive and hostile by nature. We've decided
+          to name them "Draks".
+        answers:
+        - text: That's a cool name!
+          lineIndex: 6
+          affiliationValue: -10
+        - text: That's a dumb name...
+          lineIndex: 7
+          affiliationValue: 10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Right... Anyway, my field research team has been observing those aliens
+          you found. As you yourself pointed out, these creatures seem to adopt a
+          tribal-like behavior. They're also very aggressive and hostile by nature.
+          We've decided to name them "Draks".
+        answers:
+        - text: That's a cool name!
+          lineIndex: 6
+          affiliationValue: -10
+        - text: That's a dumb name...
+          lineIndex: 7
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: 10
+        text: Right, right! Anyway, my field research team has been observing those
+          aliens you found. As you yourself pointed out, these creatures seem to adopt
+          a tribal-like behavior. They're also very aggressive and hostile by nature.
+          We've decided to name them "Draks".
+        answers:
+        - text: That's a cool name!
+          lineIndex: 6
+          affiliationValue: -10
+        - text: That's a dumb name...
+          lineIndex: 7
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: -10
+        text: Ok... Anyway, my field research team has been observing those aliens
+          you found. As you yourself pointed out, these creatures seem to adopt a
+          tribal-like behavior. They're also very aggressive and hostile by nature.
+          We've decided to name them "Draks".
+        answers:
+        - text: That's a cool name!
+          lineIndex: 6
+          affiliationValue: -10
+        - text: That's a dumb name...
+          lineIndex: 7
+          affiliationValue: 10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Heh... You're funny... Well anyway, as I was saying, my field research
+          team has been observing those aliens you found. As you yourself pointed
+          out, these creatures seem to adopt a tribal-like behavior. They're also
+          very aggressive and hostile by nature. We've decided to name them "Draks".
+        answers:
+        - text: That's a cool name!
+          lineIndex: 6
+          affiliationValue: -10
+        - text: That's a dumb name...
+          lineIndex: 7
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: 10
+        text: Ahahaha! It's so refreshing to talk to someone with a sense of humour
+          for once... Well anyway, as I was saying, my field research team has been
+          observing those aliens you found. As you yourself pointed out, these creatures
+          seem to adopt a tribal-like behavior. They're also very aggressive and hostile
+          by nature. We've decided to name them "Draks".
+        answers:
+        - text: That's a cool name!
+          lineIndex: 6
+          affiliationValue: -10
+        - text: That's a dumb name...
+          lineIndex: 7
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: -10
+        text: Okayy?? Well anyway, as I was saying, my field research team has been
+          observing those aliens you found. As you yourself pointed out, these creatures
+          seem to adopt a tribal-like behavior. They're also very aggressive and hostile
+          by nature. We've decided to name them "Draks".
+        answers:
+        - text: That's a cool name!
+          lineIndex: 6
+          affiliationValue: -10
+        - text: That's a dumb name...
+          lineIndex: 7
+          affiliationValue: 10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: If you say so... Personally, I think it's very boring for such a humongous
+          discovery... But I digress.  Has Jonas told you about his plan yet?
+        answers:
+        - text: Yes.
+          lineIndex: 8
+          affiliationValue: 0
+        - text: No.
+          lineIndex: 9
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: You really think so? Personally, I think it's very boring for such a
+          humongous discovery... But I digress.  Has Jonas told you about his plan
+          yet?
+        answers:
+        - text: Yes.
+          lineIndex: 8
+          affiliationValue: 0
+        - text: No.
+          lineIndex: 9
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Ugh, really? Personally, I think it's very boring for such a humongous
+          discovery... But I digress.  Has Jonas told you about his plan yet?
+        answers:
+        - text: Yes.
+          lineIndex: 8
+          affiliationValue: 0
+        - text: No.
+          lineIndex: 9
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: I completely agree with you. The other scientists think we should have
+          a short and simple name for everyone to be able to remember it more easily,
+          even folk outside the science department... In my opinion, a discovery of
+          this scale warrants a much worthier scientific name... But I digress. Has
+          Jonas told you about his plan yet?
+        answers:
+        - text: Yes.
+          lineIndex: 8
+          affiliationValue: 0
+        - text: No.
+          lineIndex: 9
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: THANK YOU! I completely agree. The other scientists think we should
+          have a short and simple name for everyone to be able to remember it more
+          easily, even folk outside the science department... In my opinion, a discovery
+          of this scale warrants a much worthier scientific name... But I digress.
+          Has Jonas told you about his plan yet?
+        answers:
+        - text: Yes.
+          lineIndex: 8
+          affiliationValue: 0
+        - text: No.
+          lineIndex: 9
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Actually, I agree with you there... The other scientists think we should
+          have a short and simple name for everyone to be able to remember it more
+          easily, even folk outside the science department... In my opinion, a discovery
+          of this scale warrants a much worthier scientific name... But I digress.
+          Has Jonas told you about his plan yet?
+        answers:
+        - text: Yes.
+          lineIndex: 8
+          affiliationValue: 0
+        - text: No.
+          lineIndex: 9
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Great, so you know we need to find and retrieve some lost parts for
+          that radio device he wants. Well, our team was tasked with finding a reactor
+          core, but there's a problem...
+        answers:
+        - text: What happened?
+          lineIndex: 10
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Great, so you know we need to find and retrieve some lost parts for
+          that radio device he wants. Well, our team was tasked with finding a reactor
+          core, but there's a problem...
+        answers:
+        - text: What happened?
+          lineIndex: 10
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Great, so you know we need to find and retrieve some lost parts for
+          that radio device he wants. Well, our team was tasked with finding a reactor
+          core, but there's a problem...
+        answers:
+        - text: What happened?
+          lineIndex: 10
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Okay, long story short, he wants to find and collect a bunch of parts
+          that were lost in the crash in order to build a radio device that we can
+          use to send a distress call to Earth. Well, our team was tasked with finding
+          a reactor core, but there's a problem...
+        answers:
+        - text: What happened?
+          lineIndex: 10
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: No problem, I'll tell you! Long story short, he wants to find and collect
+          a bunch of parts that were lost in the crash in order to build a radio device
+          that we can use to send a distress call to Earth. Well, our team was tasked
+          with finding a reactor core, but there's a problem...
+        answers:
+        - text: What happened?
+          lineIndex: 10
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Damn it, I really didn't want to have to explain it.... Long story short,
+          he wants to find and collect a bunch of parts that were lost in the crash
+          in order to build a radio device that we can use to send a distress call
+          to Earth. Well, our team was tasked with finding a reactor core, but there's
+          a problem...
+        answers:
+        - text: What happened?
+          lineIndex: 10
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: As it turns out, those Draks seem to be curious about our technology,
+          and they're taking whatever parts they find and taking them into their main
+          camp, if we can even call it that... And it looks like they already got
+          their hands on the reactor core.
+        answers:
+        - text: Oh boy... That's not good...
+          lineIndex: 11
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: As it turns out, those Draks seem to be curious about our technology,
+          and they're taking whatever parts they find and taking them into their main
+          camp, if we can even call it that... And it looks like they already got
+          their hands on the reactor core.
+        answers:
+        - text: Oh boy... That's not good...
+          lineIndex: 11
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: As it turns out, those Draks seem to be curious about our technology,
+          and they're taking whatever parts they find and taking them into their main
+          camp, if we can even call it that... And it looks like they already got
+          their hands on the reactor core.
+        answers:
+        - text: Oh boy... That's not good...
+          lineIndex: 11
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Anyway, that's where you come in. The people in my field team aren't
+          very eager to venture that deep into enemy territory... Do you think you
+          can try to go in and retrieve the core for us?
+        answers:
+        - text: You came to the right person. I'm in.
+          lineIndex: -1
+          affiliationValue: 10
+        - text: That's your problem, not mine.
+          lineIndex: 12
+          affiliationValue: -15
+        - text: Why is it always me? It's like everyone in here is TRYING to get me
+            killed!
+          lineIndex: 12
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: 10
+        text: Yeah, not good indeed. Anyway, that's where you come in. The people
+          in my field team aren't very eager to venture that deep into enemy territory...
+          Do you think you can try to go in and retrieve the core for us?
+        answers:
+        - text: You came to the right person. I'm in.
+          lineIndex: -1
+          affiliationValue: 10
+        - text: That's your problem, not mine.
+          lineIndex: 12
+          affiliationValue: -15
+        - text: Why is it always me? It's like everyone in here is TRYING to get me
+            killed!
+          lineIndex: 12
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: -10
+        text: Anyway, that's where you come in. The people in my field team aren't
+          very eager to venture that deep into enemy territory... Do you think you
+          can try to go in and retrieve the core for us?
+        answers:
+        - text: You came to the right person. I'm in.
+          lineIndex: -1
+          affiliationValue: 10
+        - text: That's your problem, not mine.
+          lineIndex: 12
+          affiliationValue: -15
+        - text: Why is it always me? It's like everyone in here is TRYING to get me
+            killed!
+          lineIndex: 12
+          affiliationValue: -5
+        answerIndex: 2
+    - affilationLines:
+      - affilation: -10
+        text: Well, this is for the good of the whole colony, so it really is in your
+          best interest to help me. I think you are the most qualified person for
+          this job. You've fought them before, you've survived a few encounters with
+          them. This task should be done by you.
+        answers:
+        - text: Guess I don't really have a choice... I'll do it.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 0
+        text: I'm not trying to get you killed, but I do think you are the most qualified
+          person for this job. You've fought them before, you've survived a few encounters
+          with them. I believe you can come out of this on top, I really do.
+        answers:
+        - text: Let's hope you're right... Fine, you can count on me.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: I'm sorry Kowalski! I'm not trying to get you killed, but I do think
+          you are the most qualified person for this job. You've fought them before,
+          you've survived a few encounters with them. I believe you can come out of
+          this on top, I really do.
+        answers:
+        - text: Let's hope you're right... Fine, you can count on me.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 1
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Sorry I had to bother you with this... Nobody from my field research
+          team seems to be willing to go...
+        answers:
+        - text: It's fine, I can do it.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: I'm really sorry I had to bother you with this... Nobody from my field
+          research team seems to be willing to go... You are my only hope!
+        answers:
+        - text: It's fine, I can do it.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: How are you managing your task?
+        answers:
+        - text: I'm working on it.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 2
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Did you manage to inflitrate their camp and retrieve the reactor core?
+        answers:
+        - text: It was not easy... But I did it!
+          lineIndex: 1
+          affiliationValue: 5
+        - text: Yeah, piece of cake. Those Draks didn't even touch me.
+          lineIndex: 1
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: 10
+        text: Kowalski, you're back! Did you manage to inflitrate their camp and retrieve
+          the reactor core?
+        answers:
+        - text: It was not easy... But I did it!
+          lineIndex: 1
+          affiliationValue: 5
+        - text: Yeah, piece of cake. Those Draks didn't even touch me.
+          lineIndex: 1
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: -10
+        text: Back already? Have you really managed to infiltrate their camp and retrieve
+          the reactor core?
+        answers:
+        - text: It was not easy... But I did it!
+          lineIndex: 1
+          affiliationValue: 5
+        - text: Yeah, piece of cake. Those Draks didn't even touch me.
+          lineIndex: 1
+          affiliationValue: 5
+        answerIndex: 1
+    - affilationLines:
+      - affilation: 0
+        text: Wow! You just restored the hopes of the entire colony. We might not
+          be stranded in here forever after all!
+        answers:
+        - text: I think I finally deserve a nap...
+          lineIndex: 3
+          affiliationValue: 10
+        - text: You make it seem like such a big deal...
+          lineIndex: 2
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Thank goodness you're ok! You just restored the hopes of the entire
+          colony. We might not be stranded in here forever after all!
+        answers:
+        - text: I think I finally deserve a nap...
+          lineIndex: 3
+          affiliationValue: 10
+        - text: You make it seem like such a big deal...
+          lineIndex: 2
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Wow, I can't believe you actually did it... We might not be stranded
+          in here forever after all!
+        answers:
+        - text: I think I finally deserve a nap...
+          lineIndex: 3
+          affiliationValue: 10
+        - text: You make it seem like such a big deal...
+          lineIndex: 2
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Thanks to you, building that radio device is a real possibility! Furthermore,
+          I'm sure you learned a lot of things about the Draks that our scientists
+          will be dying to hear about!
+        answers:
+        - text: I was just doing my job.
+          lineIndex: 4
+          affiliationValue: 0
+        - text: When you put it like that... I guess I am kind of awesome...
+          lineIndex: 4
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: 10
+        text: Because of your efforts, the prospect of building that radio device
+          no longer seems like a distant dream, but instead a step away from reality!
+          Furthermore, I'm sure you learned a lot of things about the Draks that our
+          scientists will be dying to hear about!
+        answers:
+        - text: I was just doing my job.
+          lineIndex: 4
+          affiliationValue: 0
+        - text: When you put it like that... I guess I am kind of awesome...
+          lineIndex: 4
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: -10
+        text: You really outdid yourself on this one, Kowalski... I'm impressed. Thanks
+          to you, we might actually be able to build that radio device...
+        answers:
+        - text: I was just doing my job.
+          lineIndex: 4
+          affiliationValue: 0
+        - text: When you put it like that... I guess I am kind of awesome...
+          lineIndex: 4
+          affiliationValue: 10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: You deserve all the naps in the world, really! Unfortunately, in the
+          situation we're in, we can't afford to have anyone slacking off, especially
+          not you!
+        answers:
+        - text: Well, I had to try...
+          lineIndex: 2
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Ahahaha! You deserve all the naps in the world, really! Unfortunately,
+          in the situation we're in, we can't afford to have anyone slacking off,
+          especially not you, Kowalski!
+        answers:
+        - text: Well, I had to try...
+          lineIndex: 2
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: You with your naps again, huh? Unfortunately, in the situation we're
+          in, we can't afford to have anyone slacking off, especially not you...
+        answers:
+        - text: Well, I had to try...
+          lineIndex: 2
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Well then. Anything else worth noting before I report this to the taskmaster?
+        answers:
+        - text: I liberated that area, and the Churus are now living there.
+          lineIndex: 5
+          affiliationValue: 5
+        - text: Not really. Report away.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Ahaha! Well, amazing job Kowalski. Anything else worth noting before
+          I report this to the taskmaster?
+        answers:
+        - text: I liberated that area, and the Churus are now living there.
+          lineIndex: 5
+          affiliationValue: 5
+        - text: Not really. Report away.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: OK, let's not get carried away now. Anything else worth noting before
+          I report this to the taskmaster?
+        answers:
+        - text: I liberated that area, and the Churus are now living there.
+          lineIndex: 5
+          affiliationValue: 5
+        - text: Not really. Report away.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Thats is fascinating... I hope they can always be safe there!
+        answers:
+        - text: Me too... Well, see you around!
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Thats is fascinating... You really did it all didn't you? I hope they
+          can always be safe there!
+        answers:
+        - text: Me too... Well, see you around!
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: That's great... I'm sure the Churus are very grateful.
+        answers:
+        - text: Me too... Well, see you around!
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 3
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: How's my research going? Oh, it's going well, thank you for asking!
+        answers:
+        - text: Cool! See you around.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Hey Kowalski! If you ever get injured out there, be sure to come by.
+          I'll send my best medic to take care of you!
+        answers:
+        - text: Thank you Paula. I will.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Oh, hi there... I'm actually really busy right now...
+        answers:
+        - text: Ok, sorry I distracted you.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0

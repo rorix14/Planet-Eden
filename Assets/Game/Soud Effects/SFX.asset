@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec32c5678087944ebbd8f287f035f37, type: 3}
+  m_Name: SFX
+  m_EditorClassIdentifier: 
+  hurtAudioClips:
+  - {fileID: 8300000, guid: c67b8f28ccb1a184cba5b958315fb75f, type: 3}
+  - {fileID: 8300000, guid: 3298d4d468badd044b2ca8930315e21d, type: 3}
+  - {fileID: 8300000, guid: da4f5695bff34bf4b88959334d31f55f, type: 3}
+  - {fileID: 8300000, guid: 2ebf38d5081e6024eb5214ce611bd747, type: 3}
+  - {fileID: 8300000, guid: e7a068fc894ced2438c719feae89ea40, type: 3}
+  hurtVolume: 0.25
+  deadAudioClips:
+  - {fileID: 8300000, guid: 876d2d17abf27c143a1b5bc16ac141ec, type: 3}
+  - {fileID: 8300000, guid: f14a7603a5a9a7942b78831c91ae547b, type: 3}
+  - {fileID: 8300000, guid: 556e2529f82d4564aba2520844acd09c, type: 3}
+  - {fileID: 8300000, guid: 1f2d6ac055cea964db62db94a0240d38, type: 3}
+  deadVolume: 0.25
+  alienHurtAudioClips:
+  - {fileID: 8300000, guid: 3e59a446753c5a04688c1f203545fcbc, type: 3}
+  - {fileID: 8300000, guid: e4b918da430354a4fa88ae2873509cee, type: 3}
+  - {fileID: 8300000, guid: 4e55a1a2e725b22479b16d82e61bdc8b, type: 3}
+  - {fileID: 8300000, guid: fdacbe2caf8d7c74bad207b878fb2eac, type: 3}
+  alienHurtVolume: 0.3
+  alienDeadAudioClips:
+  - {fileID: 8300000, guid: c0b700caa5440a74686e5b264b6754fe, type: 3}
+  alineDeadVolume: 0.5

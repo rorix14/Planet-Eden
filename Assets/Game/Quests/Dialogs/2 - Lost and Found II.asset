@@ -1,0 +1,458 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9d6f21f37d7854fbbc0b2d33ca86f6, type: 3}
+  m_Name: 2 - Lost and Found II
+  m_EditorClassIdentifier: 
+  questTitle: Lost and Found II
+  questDescription: Shortly after your first mission, the taskmaster came up with
+    a plan and gave you a new task. Find and retrieve a nanotech converter lost in
+    the crash, so that the colony can use it to assemble a radio device.
+  ItemStateDescription:
+  - itemState: 2
+    line: Look for a nanotech converter east of the colony
+  - itemState: 1
+    line: Deliver the lost part to the taskmaster
+  - itemState: 3
+    line: Quest completed
+  questRewards:
+  - affilationRequired: 0
+    rewards:
+    - consumableType: 0
+      amount: 1
+    - consumableType: 1
+      amount: 3
+    - consumableType: 2
+      amount: 2
+  - affilationRequired: 10
+    rewards:
+    - consumableType: 0
+      amount: 2
+    - consumableType: 1
+      amount: 5
+  - affilationRequired: -10
+    rewards:
+    - consumableType: 2
+      amount: 5
+    - consumableType: 1
+      amount: 1
+  stateLines:
+  - state: 0
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Greetings Kowalski. There's another lost part I want you to look for.
+          Can you do it?
+        answers:
+        - text: Yes I can. What am I looking for?
+          lineIndex: 1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Hey there captain! We have a lead for another lost part. Can you handle
+          it?
+        answers:
+        - text: Yes I can. What am I looking for?
+          lineIndex: 1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: There's another lost part I want you to look for.
+        answers:
+        - text: Ok, give me the details.
+          lineIndex: 1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Your goal is to find a nanotech converter. According to our calculations,
+          it should be around the same area you found the antena in. You may depart
+          whener you see fit.
+        answers:
+        - text: Ok, I'm on it.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: How do you even make those calculations?
+          lineIndex: 2
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: 10
+        text: Your goal is to find a nanotech converter. According to our calculations,
+          it should be around the same area you found the antena in. You may depart
+          whenever you see fit. Good luck!
+        answers:
+        - text: You can count on me!
+          lineIndex: -1
+          affiliationValue: 0
+        - text: How do you even make those calculations?
+          lineIndex: 2
+          affiliationValue: -5
+        answerIndex: 1
+      - affilation: -10
+        text: Your goal is to find a nanotech converter. According to our calculations,
+          it should be around the same area you found the antena in. Off you go now.
+        answers:
+        - text: Ok, I'm on it.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: How do you even make those calculations?
+          lineIndex: 2
+          affiliationValue: -5
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Our mathematics department is extremely qualified, and they were able
+          to deduce an area where the part might have flown off to based on the spaceship's
+          position, speed and direction at the time of the crash. Don't question their
+          efficiency.
+        answers:
+        - text: Got it. I'll be going then.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: One of them probably just saw it fly off in that direction...
+          lineIndex: 3
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: 10
+        text: Our mathematics department is extremely qualified, and they were able
+          to deduce an area where the part might have flown off to based on the spaceship's
+          position, speed and direction at the time of the crash. They're really impressive!
+        answers:
+        - text: Got it. I'll be going then.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: One of them probably just saw it fly off in that direction...
+          lineIndex: 3
+          affiliationValue: -5
+        answerIndex: 1
+      - affilation: -10
+        text: Our mathematics department is extremely qualified, and they were able
+          to deduce an area where the part might have flown off to based on the spaceship's
+          position, speed and direction at the time of the crash. Seriously, don't
+          you know your own crew?
+        answers:
+        - text: I guess that makes sense. I'll be going then.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: Yes, I do. And knowing them, one of them probably just saw it fly
+            off in that direction...
+          lineIndex: 3
+          affiliationValue: -5
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Perhaps that's the case. Nevertheless, now you know where to look. So
+          start looking.
+        answers:
+        - text: Alright. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Maybe... I wouldn't bet on it though, they're usually very efficient.
+          Either way, you know where to look now. Good luck!
+        answers:
+        - text: Alright. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Not everyone here is as brainless as you. Our mathematicians are very
+          efficient, and I trust their calculations. So stop wasting my time and start
+          looking for the part.
+        answers:
+        - text: Alright. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 1
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Have you got that converter with you already?
+        answers:
+        - text: Haven't found it yet.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Have you got that converter with you already?
+        answers:
+        - text: Haven't found it yet.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Have you got that converter with you already?
+        answers:
+        - text: Haven't found it yet.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 2
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Have you got that converter with you already?
+        answers:
+        - text: Yes, I found it.
+          lineIndex: 1
+          affiliationValue: 5
+        - text: Affirmative. The nanotech converter is in my possession.
+          lineIndex: 1
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: 10
+        text: Have you got that converter with you already?
+        answers:
+        - text: Yes, I found it.
+          lineIndex: 1
+          affiliationValue: 5
+        - text: Affirmative. The nanotech converter is in my possession.
+          lineIndex: 1
+          affiliationValue: 10
+        answerIndex: 0
+      - affilation: -10
+        text: Have you got that converter with you already?
+        answers:
+        - text: Yes, I found it.
+          lineIndex: 1
+          affiliationValue: 5
+        - text: Affirmative. The nanotech converter is in my possession.
+          lineIndex: 1
+          affiliationValue: 10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Splendid. Another task completed. Anything out of the ordinary to report?
+        answers:
+        - text: I dont think so. Things went as normally as possible.
+          lineIndex: 2
+          affiliationValue: 0
+        - text: The converter was being guarded by the aliens.
+          lineIndex: 3
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: 10
+        text: Great! I knew I could count on you. Anything out of the ordinary to
+          report?
+        answers:
+        - text: I dont think so. Things went as normally as possible.
+          lineIndex: 2
+          affiliationValue: 0
+        - text: The converter was being guarded by the aliens.
+          lineIndex: 3
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: -10
+        text: Splendid. Anything out of the ordinary to report?
+        answers:
+        - text: I dont think so. Things went as normally as possible.
+          lineIndex: 2
+          affiliationValue: 0
+        - text: The converter was being guarded by the aliens.
+          lineIndex: 3
+          affiliationValue: 5
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Hmm. A short report then. Pitty. I much prefer the bigger ones.
+        answers:
+        - text: Let me know if you have any other tasks for me. Goodbye now.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: That's what she said.
+          lineIndex: 4
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: 10
+        text: Hmm. A short report then. Pitty. I much prefer the bigger ones.
+        answers:
+        - text: Let me know if you have any other tasks for me. Goodbye now.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: That's what she said.
+          lineIndex: 4
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: -10
+        text: Of course not... A short report then. Pitty. I much prefer the bigger
+          ones.
+        answers:
+        - text: Let me know if you have any other tasks for me. Goodbye now.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: That's what she said.
+          lineIndex: 4
+          affiliationValue: -5
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: I see. Those creatures seem to have developped an interest in those
+          pieces. Surely they are intrigued by our gadgets, which for them are a mysterious
+          and foreign technology.
+        answers:
+        - text: I think you're right. We should be careful when going out looking
+            for parts.
+          lineIndex: 5
+          affiliationValue: 10
+        - text: That theory makes no sense.
+          lineIndex: 6
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: 10
+        text: 'I see, that''s good to know! Those creatures seem to have developped
+          an interest in those pieces. Surely they are intrigued by our gadgets, which
+          for them are a mysterious and foreign technology. '
+        answers:
+        - text: I think you're right. We should be careful when going out looking
+            for parts.
+          lineIndex: 5
+          affiliationValue: 10
+        - text: That theory makes no sense.
+          lineIndex: 6
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: -10
+        text: 'Hmm. Those creatures seem to have developped an interest in those pieces.
+          Surely they are intrigued by our gadgets, which for them are a mysterious
+          and foreign technology. '
+        answers:
+        - text: I think you're right. We should be careful when going out looking
+            for parts.
+          lineIndex: 5
+          affiliationValue: 10
+        - text: That theory makes no sense.
+          lineIndex: 6
+          affiliationValue: -10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Who are you refering to? Is there a woman here that enjoys lengthy and
+          detailed reports like I do? And here I thought Benny was the only one who
+          understood me... Who is this person you speak of?
+        answers:
+        - text: Uhhh... I was making a j-... Nevermind. Come to me if you need any
+            more tasks done.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: I'll let you figure it out for yourself. Call it your new task. Goodbye
+            now.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Who are you refering to? Is there a woman here that enjoys lengthy and
+          detailed reports like I do? And here I thought Benny was the only one who
+          understood me... Who is this person you speak of?
+        answers:
+        - text: Uhhh... I was making a j-... Nevermind. Come to me if you need any
+            more tasks done.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: I'll let you figure it out for yourself. Call it your new task. Goodbye
+            now.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Who are you refering to? Is there a woman here that enjoys lengthy and
+          detailed reports like I do? And here I thought Benny was the only one who
+          understood me... Who is this person you speak of?
+        answers:
+        - text: Uhhh... I was making a j-... Nevermind. Come to me if you need any
+            more tasks done.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: I'll let you figure it out for yourself. Call it your new task. Goodbye
+            now.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Indeed. Well, thank you for your report. Take care now.
+        answers:
+        - text: Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Absolutely! Glad we're on the same page. Well, this report is done.
+          I'll call you if I have another task for you, but feel free to come by and
+          chat anytime!
+        answers:
+        - text: I will! See you later.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Sometimes the sentences that come out of your mouth make sense. Anyway,
+          we're done with the report now. I'll let you knwo if another task comes
+          up.
+        answers:
+        - text: Goodbye then.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: I did not ask for your opinion, Kowalski. In any case, I must advise
+          you and the others who are going to look for parts to proceed with caution.
+          It's unlikely that we'll find many parts unguarded. Take care now, we shall
+          speak  when I have another task for you.
+        answers:
+        - text: Goodbye.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 20
+        text: You're just saying that to get under my skin... Anyway, just be careful
+          out there. I'll let you know if another task comes up. Bye for now!
+        answers:
+        - text: Goodbye.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -20
+        text: I did not ask for your opinion, Kowalski. I grow more tired of your
+          "witty" remarks each day. *sigh* No use wasting my breath with the likes
+          of you. Just get out of here.
+        answers:
+        - text: Alright. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 3
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: I have no more tasks for you at the moment. I shall let you know if
+          that changes.
+        answers:
+        - text: Ok.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Hey Kowalski! Kicking alien butt as always?
+        answers:
+        - text: You bet!
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Get out of here, I'm busy.
+        answers:
+        - text: Bye then.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0

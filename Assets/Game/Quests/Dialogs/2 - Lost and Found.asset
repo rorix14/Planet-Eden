@@ -1,0 +1,731 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9d6f21f37d7854fbbc0b2d33ca86f6, type: 3}
+  m_Name: 2 - Lost and Found
+  m_EditorClassIdentifier: 
+  questTitle: Lost and Found
+  questDescription: Shortly after your first mission, the taskmaster came up with
+    a plan and gave you a new task. Find and retrieve an ultrasonic antena lost in
+    the crash, so that the colony can use it to assemble a radio device.
+  ItemStateDescription:
+  - itemState: 2
+    line: Look for an ultrasonic antena west of the colony
+  - itemState: 1
+    line: Deliver the lost part to the taskmaster
+  - itemState: 3
+    line: Quest completed
+  questRewards:
+  - affilationRequired: 0
+    rewards:
+    - consumableType: 0
+      amount: 1
+    - consumableType: 2
+      amount: 2
+    - consumableType: 1
+      amount: 3
+  - affilationRequired: 10
+    rewards:
+    - consumableType: 0
+      amount: 2
+    - consumableType: 2
+      amount: 4
+  - affilationRequired: -10
+    rewards:
+    - consumableType: 2
+      amount: 1
+    - consumableType: 1
+      amount: 5
+  stateLines:
+  - state: 0
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Greetings Kowalski. I've got a new task for you.
+        answers:
+        - text: What's the issue?
+          lineIndex: 1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Hey Kowalski! How are you? I've got a new task for you. Are you up for
+          it?
+        answers:
+        - text: Sure. What's the issue?
+          lineIndex: 1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: I've got a new task for you. Think you can handle it?
+        answers:
+        - text: I can handle it. What's the issue?
+          lineIndex: 1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: As you very well know, we are stranded on this planet for the time being,
+          due to the crash. And the situation is even worse now that we know there
+          are dangerous aliens all around us.
+        answers:
+        - text: Yeah, we're in a tight spot...
+          lineIndex: 2
+          affiliationValue: 0
+        - text: I'm aware of our situation. Get to the point.
+          lineIndex: 2
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: 10
+        text: As you very well know, we are stranded on this planet for the time being,
+          due to the crash. And the situation is even worse now that we know there
+          are dangerous aliens all around us.
+        answers:
+        - text: Yeah, we're in a tight spot...
+          lineIndex: 2
+          affiliationValue: 0
+        - text: I'm aware of our situation. Get to the point.
+          lineIndex: 2
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: -10
+        text: As you should know by now, we are stranded on this planet for the time
+          being, due to the crash. Great job by the way, I hadn't congratulated you
+          on that marvelous landing yet. Anyway the situation is even worse now that
+          we know there are dangerous aliens all around us.
+        answers:
+        - text: Don't sass me Jonas. Where are you going with this?
+          lineIndex: 2
+          affiliationValue: 0
+        - text: I'm aware of our situation. Get to the point.
+          lineIndex: 2
+          affiliationValue: 5
+        answerIndex: 1
+    - affilationLines:
+      - affilation: 0
+        text: Well, we can't repair our ship well enough in order to safely return
+          to Earth... nor would we have enough fuel... But we can salvage some of
+          the parts lost in the crash to build another device...
+        answers:
+        - text: What kind of device?
+          lineIndex: 3
+          affiliationValue: 0
+        - text: Hmm... I'm listening...
+          lineIndex: 3
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Well, we can't repair our ship well enough in order to safely return
+          to Earth... nor would we have enough fuel... But we can salvage some of
+          the parts lost in the crash to build another device...
+        answers:
+        - text: What kind of device?
+          lineIndex: 3
+          affiliationValue: 0
+        - text: Hmm... I'm listening...
+          lineIndex: 3
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Well, we can't repair our ship well enough in order to safely return
+          to Earth... nor would we have enough fuel... But we can salvage some of
+          the parts lost in the crash to build another device...
+        answers:
+        - text: What kind of device?
+          lineIndex: 3
+          affiliationValue: 0
+        - text: Hmm... I'm listening...
+          lineIndex: 3
+          affiliationValue: 0
+        answerIndex: 1
+    - affilationLines:
+      - affilation: 0
+        text: A communication device. A sort of radio, if you will. With the right
+          parts, we can build a gadget with a powerful enough signal to reach Earth
+          and send them a message with a request for a rescue operation.
+        answers:
+        - text: I see. That's a good idea!
+          lineIndex: 4
+          affiliationValue: 10
+        - text: I see. That's a terrible idea...
+          lineIndex: 5
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: 10
+        text: A communication device. A sort of radio, if you will. With the right
+          parts, we can build a gadget with a powerful enough signal to reach Earth
+          and send them a message with a request for a rescue operation.
+        answers:
+        - text: I see. That's a good idea!
+          lineIndex: 4
+          affiliationValue: 10
+        - text: I see. That's a terrible idea...
+          lineIndex: 5
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: -10
+        text: A communication device. A sort of radio, if you will. With the right
+          parts, we can build a gadget with a powerful enough signal to reach Earth
+          and send them a message with a request for a rescue operation.
+        answers:
+        - text: I see. That's a good idea!
+          lineIndex: 4
+          affiliationValue: 10
+        - text: I see. That's a terrible idea...
+          lineIndex: 5
+          affiliationValue: -10
+        answerIndex: 1
+    - affilationLines:
+      - affilation: 0
+        text: Thank you. The rest of the colony seems to be on board as well. I believe
+          it's our best option at the moment. So as you can probably guess, your next
+          task is to find and retrieve the necessary parts to assemble this radio
+          device.
+        answers:
+        - text: Sounds good. Where do I start?
+          lineIndex: 6
+          affiliationValue: 5
+        - text: What kind of part am I looking for exactly?
+          lineIndex: 6
+          affiliationValue: 5
+        - text: Ok, I'll se what I can find. I'll talk to you when I get my hands
+            on one.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Thank you! I knew you'd like it! The rest of the colony seems to be
+          on board as well. I believe it's our best option at the moment. So as you
+          can probably guess, your next task is to find and retrieve the necessary
+          parts to assemble this radio device. Should be a piece of cake for you!
+        answers:
+        - text: Sounds good. Where do I start?
+          lineIndex: 6
+          affiliationValue: 5
+        - text: What kind of part am I looking for exactly?
+          lineIndex: 6
+          affiliationValue: 5
+        - text: Ok, I'll se what I can find. I'll talk to you when I get my hands
+            on one.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: I know it is. The rest of the colony seems to be on board as well. It's
+          our best option at the moment, given the predicament you've put us all in.
+          So as you can probably guess, your next task is to find and retrieve the
+          necessary parts to assemble this radio device.
+        answers:
+        - text: Ok. Where do I start?
+          lineIndex: 6
+          affiliationValue: 0
+        - text: What kind of part am I looking for exactly?
+          lineIndex: 6
+          affiliationValue: 0
+        - text: Watch your tone, Jonas. I'll get those parts, for the good of the
+            colony. I'll talk to you when I find one.
+          lineIndex: -1
+          affiliationValue: -10
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Well, if you have any better ideas, feel free to share them with us.
+          The rest of the colony agrees with this plan, so you'll follow along unless
+          you propose a better course of action.
+        answers:
+        - text: I'm sure I'll think of something...
+          lineIndex: 8
+          affiliationValue: -5
+        - text: OK, I'll help you with this plan.
+          lineIndex: 9
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: 10
+        text: Hey, no need to put me down like that... The rest of the colony seems
+          to agree with me. Do you have any better ideas?.
+        answers:
+        - text: I'm sure I'll think of something...
+          lineIndex: 8
+          affiliationValue: -5
+        - text: No, I was joking. I'll help you with this plan.
+          lineIndex: 9
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: -10
+        text: Better than anything you've ever come up with in your pathetic career
+          as captain. How you got that position in the first place still baffles me
+          to this day. Anyway, unless you want to be demoted for good, you'll follow
+          along, since the rest of the colony seems to agree with me.
+        answers:
+        - text: I'm sure I'll think of something better than THAT...
+          lineIndex: 8
+          affiliationValue: -5
+        - text: Fine... I'll help you with this plan.
+          lineIndex: 9
+          affiliationValue: 5
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: You'll start by looking for an ultrasonic antena. We suspect it might
+          be located west of here, not too far from the colony. You may depart as
+          soon as you're ready.
+        answers:
+        - text: Understood. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: It always has to be me going outside the colony to deal with the killer
+            aliens... Can't you send anyone else?
+          lineIndex: 7
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: 10
+        text: You'll start by looking for an ultrasonic antena. We suspect it might
+          be located west of here, not too far from the colony. You may depart as
+          soon as you're ready. Good luck!!
+        answers:
+        - text: Understood. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: It always has to be me going outside the colony to deal with the killer
+            aliens... Can't you send anyone else?
+          lineIndex: 7
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: -10
+        text: You'll start by looking for an ultrasonic antena. We suspect it might
+          be located west of here, not too far from the colony. Well? What are you
+          still doing here? Get going
+        answers:
+        - text: Understood. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        - text: It always has to be me going outside the colony to deal with the killer
+            aliens... Can't you send anyone else?
+          lineIndex: 7
+          affiliationValue: -5
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: You're the only one who has had an encounter with them before and survived.
+          You'll know how to handle the situation better than anyone else, and you
+          have to admit, you have a knack for fighting. So stop complaining and get
+          to work.
+        answers:
+        - text: Fine...
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Sorry Kowalski... You're the only one who has had an encounter with
+          them before and survived. You'll know how to handle the situation better
+          than anyone else. Plus, you have to admit, you have a knack for fighting!
+          Don't worry, I'm sure you'll be fine.
+        answers:
+        - text: Yeah, you're right... I'll be going then.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: No. Stop complaining about your tasks, you're only making things worse
+          for yourself. Now get a move on.
+        answers:
+        - text: Fine...
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: You'll have plenty of time to think of better ideas while you're doing
+          your task. Now, if you'd let me finish, I would like to explain it to you.
+        answers:
+        - text: OK, sorry. Go on.
+          lineIndex: 9
+          affiliationValue: 5
+        - text: Let me guess... my task is to search the area to look for useful parts
+            that we could use to build the radio device?
+          lineIndex: 10
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: 10
+        text: Well, I guess you can try to think of better ideas while you're doing
+          your task, right?. So, should I explain it to you or not?
+        answers:
+        - text: Yes, please do.
+          lineIndex: 9
+          affiliationValue: 5
+        - text: Let me guess... my task is to search the area to look for useful parts
+            that we could use to build the radio device?
+          lineIndex: 10
+          affiliationValue: -5
+        answerIndex: 0
+      - affilation: -10
+        text: You won't. Can I explain the task to you now?
+        answers:
+        - text: Yes, please do.
+          lineIndex: 9
+          affiliationValue: 5
+        - text: Let me guess... my task is to search the area to look for useful parts
+            that we could use to build the radio device?
+          lineIndex: 10
+          affiliationValue: -5
+        answerIndex: 1
+    - affilationLines:
+      - affilation: 0
+        text: Good. As you can probably guess, your next task is to find and retrieve
+          the necessary parts to assemble the radio device I was telling you about.
+        answers:
+        - text: Sounds good. Where do I start?
+          lineIndex: 6
+          affiliationValue: 5
+        - text: What kind of part am I looking for exactly?
+          lineIndex: 6
+          affiliationValue: 5
+        - text: Ok, I'll see what I can find. I'll talk to you when I get my hands
+            on one.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Alright, great! As you can probably guess, your next task is to find
+          and retrieve the necessary parts to assemble the radio device I was telling
+          you about.
+        answers:
+        - text: Sounds good. Where do I start?
+          lineIndex: 6
+          affiliationValue: 5
+        - text: What kind of part am I looking for exactly?
+          lineIndex: 6
+          affiliationValue: 5
+        - text: Ok, I'll see what I can find. I'll talk to you when I get my hands
+            on one.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Good. Your task is simply to find and retrieve the necessary parts to
+          assemble the radio device I was telling you about. Do you understand?
+        answers:
+        - text: Yup. Where do I start?
+          lineIndex: 6
+          affiliationValue: 5
+        - text: What kind of part am I looking for exactly?
+          lineIndex: 6
+          affiliationValue: 5
+        - text: Ok, I'll see what I can find. I'll talk to you when I get my hands
+            on one.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Yes... that is the task... You'll start by looking for an ultrasonic
+          antena. We suspect it might be located west of here, not too far from the
+          colony. You may depart whenever you're ready.
+        answers:
+        - text: Got it. See you soon.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: That's it! You'll start by looking for an ultrasonic antena. We suspect
+          it might be located west of here, not too far from the colony. Good luck!
+        answers:
+        - text: Thank you Jonas! See you soon.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Yes... that is the task... You'll start by looking for an ultrasonic
+          antena. We suspect it might be located west of here, not too far from the
+          colony. Now get out of my sight and go get it.
+        answers:
+        - text: Gladly. Bye bye now.
+          lineIndex: -1
+          affiliationValue: -5
+        - text: Love you too, Jonas. See you soon.
+          lineIndex: -1
+          affiliationValue: 5
+        answerIndex: 1
+  - state: 1
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Found anything?
+        answers:
+        - text: I'm afraid not.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: What's up Kowalski? Any luck finding a lost part?
+        answers:
+        - text: Sorry, not yet.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: You don't look to be carrying any lost part with you. Have you found
+          anything or not?
+        answers:
+        - text: I'm afraid not.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 2
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: Found anything?
+        answers:
+        - text: I found the antena.
+          lineIndex: 1
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: 10
+        text: What's up Kowalski? Any luck finding a lost part?
+        answers:
+        - text: I found the antena.
+          lineIndex: 1
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: -10
+        text: Have you found any lost part yet?
+        answers:
+        - text: I found the antena.
+          lineIndex: 1
+          affiliationValue: 5
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Good work. You know, I'm beggining to like your efficiency.
+        answers:
+        - text: Thank you, Jonas. Do you need anything else for your report?
+          lineIndex: 2
+          affiliationValue: 10
+        - text: Is that a compliment I hear? From you?
+          lineIndex: 3
+          affiliationValue: 5
+        - text: I don't care. Tell me when I have another task.
+          lineIndex: -1
+          affiliationValue: -10
+        answerIndex: 0
+      - affilation: 10
+        text: Great job! I knew you'd be up for it.
+        answers:
+        - text: Thank you, Jonas. Do you need anything else for your report?
+          lineIndex: 2
+          affiliationValue: 10
+        - text: Is that a compliment I hear? I've been hearing a lot of those from
+            you lately
+          lineIndex: 3
+          affiliationValue: 5
+        - text: I don't care. Tell me when I have another task.
+          lineIndex: -1
+          affiliationValue: -10
+        answerIndex: 1
+      - affilation: -10
+        text: Two successful tasks in a row... who would have thought. You can actually
+          be efficient sometimes.
+        answers:
+        - text: Thank you, Jonas. Do you need anything else for your report?
+          lineIndex: 2
+          affiliationValue: 10
+        - text: Is that a compliment I hear? From you?
+          lineIndex: 3
+          affiliationValue: 5
+        - text: I don't care. Tell me when I have another task.
+          lineIndex: -1
+          affiliationValue: -10
+        answerIndex: 1
+    - affilationLines:
+      - affilation: 0
+        text: Well, if there is more information you think could be relevant to the
+          report, please share it.
+        answers:
+        - text: It seems those Draks took an interest in the technology present in
+            our lost parts.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I found it near a nest of those cute yellow Churus. They appear to
+            be oppressed by the other species.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I don't really have anything important to add. Just let me know if
+            there is another task for me.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Well, if there is more information you think could be relevant to the
+          report, please share it. I'll be more than happy to hear it.
+        answers:
+        - text: It seems those Draks took an interest in the technology present in
+            our lost parts.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I found it near a nest of those cute yellow Churus. They appear to
+            be oppressed by the other species.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I don't really have anything important to add. Just let me know if
+            there is another task for me.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Well, if there is more important information you think could be relevant
+          to the report, please share it. But I doubt it.
+        answers:
+        - text: It seems those Draks took an interest in the technology present in
+            our lost parts.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I found it near a nest of those cute yellow Churus. They appear to
+            be oppressed by the other species.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I don't really have anything important to add. Just let me know if
+            there is another task for me.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Oh please, don't get carried away. Think of it as a formal commendation
+          for doing the task you were given.
+        answers:
+        - text: That was a compliment and we both know it. I apreciate that, thank
+            you.
+          lineIndex: 5
+          affiliationValue: 5
+        - text: You know, you really should try to embrace that soft side of yours
+            more often.
+          lineIndex: 5
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: 10
+        text: It was. I don't usually complement people, but you've proven to be very
+          effective and worthy of praise, despite your childish sense of humour.
+        answers:
+        - text: I apreciate that, thank you.
+          lineIndex: 2
+          affiliationValue: 5
+        - text: You know, you really should try to embrace that soft side of yours
+            more often.
+          lineIndex: 5
+          affiliationValue: 5
+        answerIndex: 0
+      - affilation: -10
+        text: No, it was clearly meant as a back-handed insult. Are you that desperate
+          for being liked?
+        answers:
+        - text: That was a compliment and we both know it. I apreciate that, thank
+            you.
+          lineIndex: 5
+          affiliationValue: 5
+        - text: You know, you really should try to embrace that soft side of yours
+            more often.
+          lineIndex: 5
+          affiliationValue: 5
+        answerIndex: 1
+    - affilationLines:
+      - affilation: 0
+        text: Curious. I'll make sure to send this report to the scientific department
+          too. Well, I think we're all done. I'll call you when I have another task
+          for you.
+        answers:
+        - text: Sounds good. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: That's very interesting!. I'll make sure to send this report to the
+          scientific department too. Well, I think we're all done. I'll call you when
+          I have another task for you. Great job Kowalski, keep it up!
+        answers:
+        - text: Thank you. Farewell.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Curious. I'll make sure to send this report to the scientific department
+          too. *sigh* We're finally done. You may leave now. I'll summon you if I
+          have another task for you.
+        answers:
+        - text: Goodbye.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+    - affilationLines:
+      - affilation: 0
+        text: Nonsense. Anyway, let's finish up this task report. Any more relevant
+          information I should know about? And no more jokes this time!
+        answers:
+        - text: It seems those Draks took an interest in the technology present in
+            our lost parts.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I found it near a nest of those cute yellow Churus. They appear to
+            be oppressed by the other species.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I don't really have anything important to add. Just let me know if
+            there is another task for me.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: 10
+        text: Nonsense. Anyway, let's finish up this task report. Any more relevant
+          information I should know about? And no more jokes this time!
+        answers:
+        - text: It seems those Draks took an interest in the technology present in
+            our lost parts.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I found it near a nest of those cute yellow Churus. They appear to
+            be oppressed by the other species.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I don't really have anything important to add. Just let me know if
+            there is another task for me.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+      - affilation: -10
+        text: Enough of your blasphemies. Let's finish up this task report. If there's
+          any more relevant information regarding your task, please share it. But
+          I doubpt it.
+        answers:
+        - text: It seems those Draks took an interest in the technology present in
+            our lost parts.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I found it near a nest of those cute yellow Churus. They appear to
+            be oppressed by the other species.
+          lineIndex: 4
+          affiliationValue: 5
+        - text: I don't really have anything important to add. Just let me know if
+            there is another task for me.
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
+  - state: 3
+    lines:
+    - affilationLines:
+      - affilation: 0
+        text: If you're reading this, you broke the game. Congratz!
+        answers:
+        - text: Hackerman
+          lineIndex: -1
+          affiliationValue: 0
+        - text: Buggy game
+          lineIndex: -1
+          affiliationValue: 0
+        answerIndex: 0
